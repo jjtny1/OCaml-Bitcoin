@@ -13,7 +13,7 @@ let compute_merkle_level level =
 
 let merkle_root li =
 	let rec aux level = match (compute_merkle_level level) with
-		| [] -> hash ""
+		| [] -> hash []
 		| [h] -> h
 		| v -> aux v
 	in
